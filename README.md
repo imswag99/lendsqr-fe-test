@@ -4,11 +4,11 @@ A responsive frontend implementation of the Lendsqr Admin Dashboard built with R
 
 ## Live Demo
 
-Deployed Application: [INSERT DEPLOYMENT URL]
+Deployed Application: [https://swagat-talukdar-lendsqr-fe-test.vercel.app/]
 
 ## Repository
 
-Source Code: [INSERT GITHUB REPOSITORY URL]
+Source Code: [https://github.com/imswag99/lendsqr-fe-test]
 
 ---
 
