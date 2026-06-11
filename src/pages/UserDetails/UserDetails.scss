@@ -1,0 +1,129 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixins;
+
+.back-button {
+    text-decoration: none;
+}
+
+.page-header {
+    h1 {
+        font-size: 25px;
+        font-weight: normal;
+        color: var.$secondary-color;
+    }
+}
+
+.profile {
+    padding: 2rem;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .profile__img {
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        @include mixins.flex-center;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: normal;
+        color: var.$secondary-color;
+    }
+}
+
+.personal-details {
+    padding: 2rem;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    p {
+        color: var.$secondary-color;
+    }
+}
+
+.info-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 1rem;
+
+    p {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12px;
+        font-weight: 400;
+        color: var.$secondary-color;
+    }
+
+    h3 {
+        color: var.$secondary-color;
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .page-header {
+        h1 {
+            font-size: 22px;
+        }
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .personal-details {
+        padding: 1.5rem;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .page-header {
+        h1 {
+            font-size: 20px;
+        }
+    }
+
+    .profile {
+        padding: 1rem;
+
+        h1 {
+            font-size: 18px;
+        }
+    }
+
+    .personal-details {
+        padding: 1rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .info-grid h3 {
+        word-break: break-word;
+    }
+}

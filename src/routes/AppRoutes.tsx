@@ -1,0 +1,21 @@
+import { Routes, Route } from "react-router-dom";
+import LoginPage from "../pages/Login";
+import DashboardPage from "../pages/Dashboard";
+import UsersPage from "../pages/Users";
+import UserDetailsPage from "../pages/UserDetails";
+
+const AppRoutes = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<LoginPage />} />
+
+            <Route path="/dashboard" element={<DashboardPage />} />
+
+            <Route path="/users" element={<UsersPage />} />
+
+            <Route path="/users/:id" element={<UserDetailsPage />} />
+        </Routes>
+    );
+};
+
+export default AppRoutes;

@@ -1,0 +1,45 @@
+.status-badge {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 100px;
+    min-width: 80px;
+}
+
+.active {
+    background: #e6fff0;
+    color: green;
+}
+
+.inactive {
+    background: #f5f5f5;
+    color: gray;
+}
+
+.pending {
+    background: #fff8e6;
+    color: orange;
+}
+
+.blacklisted {
+    background: #ffe6e6;
+    color: red;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .status-badge {
+        min-width: 70px;
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .status-badge {
+        min-width: 60px;
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+}

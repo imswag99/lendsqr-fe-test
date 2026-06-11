@@ -1,0 +1,41 @@
+.dashboard-layout {
+    min-height: 100vh;
+}
+
+.dashboard-body {
+    display: flex;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    padding: 3rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .dashboard-body {
+        flex-direction: column;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 1rem;
+        gap: 20px;
+    }
+}

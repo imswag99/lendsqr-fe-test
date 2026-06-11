@@ -1,0 +1,48 @@
+@use "../../styles/variables" as var;
+
+.page-header {
+    h1 {
+        font-size: 25px;
+        font-weight: normal;
+        color: var.$secondary-color;
+    }
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .page-header {
+        h1 {
+            font-size: 22px;
+        }
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .table-section {
+        overflow-x: auto;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .page-header {
+        h1 {
+            font-size: 20px;
+        }
+    }
+}

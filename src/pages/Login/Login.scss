@@ -1,0 +1,165 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixins;
+
+.login {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.login__navbar {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.login__navbar__logo {
+    width: 170px;
+}
+
+.login__main {
+    height: calc(100vh - 200px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login__img {
+    width: 40%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.login__form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+
+    .login__form__header {
+        gap: 10px;
+
+        h1 {
+            color: var.$secondary-color;
+        }
+
+        p {
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+
+        input {
+            width: 60%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding-left: 10px;
+        }
+
+        button {
+            width: 60%;
+            height: 40px;
+            border-radius: 5px;
+            background: var.$primary-color;
+            color: white;
+            border: none;
+        }
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .login__main {
+        padding: 0 2rem;
+        gap: 3rem;
+    }
+
+    .login__img,
+    .login__form {
+        width: 50%;
+    }
+
+    .login__form {
+        form {
+            input,
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .login__navbar {
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    .login__navbar__logo {
+        width: 140px;
+    }
+
+    .login__main {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .login__img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .login__form {
+        width: 100%;
+        gap: 2rem;
+
+        form {
+            width: 100%;
+
+            input,
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .login__navbar {
+        height: 90px;
+    }
+
+    .login__navbar__logo {
+        width: 120px;
+    }
+
+    .login__main {
+        padding: 1rem;
+    }
+
+    .login__form {
+        .login__form__header {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

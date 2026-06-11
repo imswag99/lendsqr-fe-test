@@ -1,0 +1,63 @@
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as var;
+
+.stats-card {
+    @include mixins.flex-center;
+    flex-direction: column;
+    width: auto;
+    min-height: 150px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    h4 {
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 30px;
+        font-weight: bold;
+        color: var.$secondary-color;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .stats-card {
+        height: 140px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .stats-card {
+        height: 120px;
+        padding: 1rem;
+    }
+
+    .stats-card h4 {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .stats-card p {
+        font-size: 24px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .stats-card {
+        height: 110px;
+    }
+
+    .stats-card h4 {
+        font-size: 11px;
+    }
+
+    .stats-card p {
+        font-size: 22px;
+    }
+}
